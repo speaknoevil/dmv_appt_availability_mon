@@ -19,7 +19,7 @@ def sns_away():
 
 def main():
     ''' One more covid-19 inconvenience solved with science. '''
-    out = '/root/dmv_scrape.o'
+    out = '/home/ec2-user/dmv_scrape.o'
     search_str = 'New appointments are not currently available'
     pulled = pull_data()
     if search_str in pulled[0]:
