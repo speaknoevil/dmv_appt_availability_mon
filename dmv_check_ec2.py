@@ -9,7 +9,7 @@ import boto3
 def pull_data():
     resp = requests.get('https://www.dmv.ca.gov/portal/make-an-appointment/')
     soup = bs.BeautifulSoup(resp.text, features="lxml")
-    qotd = [ soup.find_all('p')[0].get_text() ]
+    qotd = [ soup.find_all('p')[1].get_text() ]
     return qotd
 
 def sns_away():
